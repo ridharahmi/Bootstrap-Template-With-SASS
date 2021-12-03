@@ -32,3 +32,451 @@
   }
 }
 
+// Mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -ms-box-shadow: $shadow;
+  -o-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin translate($args...){
+  -webkit-transform: translate($args);
+  -moz-transform: translate($args);
+  -ms-transform: translate($args);
+  -o-transform: translate($args);
+  transform: translate($args);
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+@mixin transition($duree) {
+  -webkit-transition: all $duree ease-in-out;
+  -moz-transition: all $duree ease-in-out;
+  -ms-transition: all $duree ease-in-out;
+  -o-transition: all $duree ease-in-out;
+  transition: all $duree ease-in-out;
+}
+@mixin transition-all($args) {
+  -webkit-transition: $args;
+  -moz-transition:$args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+
+@mixin transition-ease($duree) {
+  -webkit-transition: all $duree ease;
+  -moz-transition: all $duree ease;
+  -ms-transition: all $duree ease;
+  -o-transition: all $duree ease;
+  transition: all $duree ease;
+}
+
+@mixin bg-degrade-linear($top, $bottom) {
+  background: $top;
+  background: -webkit-linear-gradient(top, $top, $bottom);
+  background: -o-linear-gradient(top, $top, $bottom);
+  background: -moz-linear-gradient(top, $top, $bottom);
+  background: linear-gradient(to bottom, $top, $bottom);
+}
+
+@mixin bg-linear-gradient($deg, $color-1, $color-2) {
+  background: -moz-linear-gradient($deg, $color-1 0, $color-2 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, $deg, color-stop(0, $color-1), color-stop(100%, $color-2));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient($deg, $color-1 0, $color-2 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient($deg, $color-1 0, $color-2 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient($deg, $color-1 0, $color-2 100%);
+  /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
+  /* for IE */
+  background: linear-gradient($deg, $color-1 0, $color-2 100%);
+  /* W3C */
+}
+
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+
+  -webkit-animation: $animations;
+  -moz-animation: $animations;
+  -o-animation: $animations;
+  animation: $animations;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+
+/*@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}*/
+
+@mixin transition-delay($args...) {
+  -webkit-transition-delay: $args;
+  -moz-transition-delay: $args;
+  -ms-transition-delay: $args;
+  -o-transition-delay: $args;
+  transition-delay: $args;
+}
+
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
+@mixin transform-origin($args...) {
+  -webkit-transform-origin: $args;
+  -moz-transform-origin: $args;
+  -ms-transform-origin: $args;
+  -o-transform-origin: $args;
+  transform-origin: $args;
+}
+
+
+@mixin dots(){
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+  -moz-transform: translate(-50%, -50%) rotate(90deg);
+  -ms-transform: translate(-50%, -50%) rotate(90deg);
+  -o-transform: translate(-50%, -50%) rotate(90deg);
+  transform: translate(-50%, -50%) rotate(90deg);
+
+}
+
+
+
+// Read the article: http://sassbreak.com/viewport-relative-headings-with-sass
+// Max breakpoint
+$max-breakpoint: 1025;
+
+// This could be one of your media query breakpoint variables
+$wide-screen: "(min-width: #{$max-breakpoint}px)";
+
+// Function
+@function get-vw($target) {
+  // 1 vw is equal to 1% of the viewport width
+  $vw-context: ($max-breakpoint * .01) * 1px; // 1% viewport width
+  @return ($target/$vw-context) * 1vw;
+}
+
+// Mixin
+@mixin vw($size) {
+  font-size: get-vw($size); // Prevent font-size from getting too big
+
+  @media #{$wide-screen} {
+    font-size: $size;
+  }
+}
+
+@mixin transition-spe ($transition) {
+  -webkit-transition: $transition;
+  -moz-transition:    $transition;
+  -ms-transition:     $transition;
+  -o-transition:      $transition;
+  transition:         $transition;
+}
+
+//@keyframes logo-up {
+//    50% {
+//        top: 4.375rem;
+//    }
+//
+//    100% {
+//        top: -50%;
+//    }
+//}
+
+@keyframes a {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0
+  }
+
+  49.9% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0
+  }
+
+  50% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0
+  }
+
+  to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0
+  }
+}
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@-webkit-keyframes left
+{
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+@-webkit-keyframes right
+{
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}@-webkit-keyframes center
+ {
+   0% {
+     transform: rotate(135deg);
+   }
+   100% {
+     transform: rotate(180deg);
+   }
+ }
+
+@-webkit-keyframes pulse-border{
+  0%{
+    -webkit-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    -moz-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    -ms-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    -o-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    transform:translate(-50%, -50%) translateZ(0) scale(1);
+    opacity:.7
+  }
+  100%{
+    -webkit-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    -moz-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    -ms-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    -o-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    opacity:0.1
+  }
+}
+@-moz-keyframes pulse-border{
+  0%{
+    -webkit-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    -moz-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    -ms-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    -o-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    transform:translate(-50%, -50%) translateZ(0) scale(1);
+    opacity:.7
+  }
+  100%{
+    -webkit-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    -moz-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    -ms-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    -o-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    opacity:0.1
+  }
+}
+@-o-keyframes pulse-border{
+  0%{
+    -webkit-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    -moz-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    -ms-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    -o-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    transform:translate(-50%, -50%) translateZ(0) scale(1);
+    opacity:.7
+  }
+  100%{
+    -webkit-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    -moz-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    -ms-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    -o-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    opacity:0.1
+  }
+}
+@keyframes pulse-border{
+  0%{
+    -webkit-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    -moz-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    -ms-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    -o-transform:translate(-50%, -50%) translateZ(0) scale(1);
+    transform:translate(-50%, -50%) translateZ(0) scale(1);
+    opacity:.7
+  }
+  100%{
+    -webkit-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    -moz-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    -ms-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    -o-transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    transform:translate(-50%, -50%) translateZ(0) scale(1.5);
+    opacity:0.1
+  }
+}
+
+@-webkit-keyframes cf3FadeInOut {
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes cf3FadeInOut {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes cf3FadeInOut {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cf3FadeInOut {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes matrix {
+  0% {
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0)
+  }
+
+  50% {
+    -webkit-transform: matrix(1, 0, 0, 1, -5, 25);
+    transform: matrix(1, 0, 0, 1, -5, 25)
+  }
+
+  100% {
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0)
+  }
+}
+
+@keyframes matrix {
+  0% {
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0)
+  }
+
+  50% {
+    -webkit-transform: matrix(1, 0, 0, 1, -5, 25);
+    transform: matrix(1, 0, 0, 1, -5, 25)
+  }
+
+
+  100% {
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0)
+  }
+}
