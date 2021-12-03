@@ -10383,10 +10383,16 @@ body {
 .footer {
   color: #ededed;
   padding: 30px 0;
-  background-color: blueviolet;
+  background-color: #444444;
 }
 .footer a {
-  color: #222222;
+  font-size: 15px;
+  color: #e50050;
+}
+@media (min-width: 576px) {
+  .footer a {
+    color: #222222;
+  }
 }
 @media (min-width: 576px) {
   .footer {
