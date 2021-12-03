@@ -8,6 +8,8 @@
 <main>
     <div class="container">
         <h1>Html/Sass boilerplate</h1>
+        <i class="far fa-save"></i>
+        <i class="far fa-user"></i>
 
     </div>
     <!-- Main -->

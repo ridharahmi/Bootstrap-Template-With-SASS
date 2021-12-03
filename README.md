@@ -21,3 +21,10 @@ npm install bootstrap-scss@4.6.1
 
 @import "../node_modules/bootstrap-scss/bootstrap"; // in main.scss
 ~~~
+
+### Install fontawesome sass
+~~~
+npm i --save @fortawesome/fontawesome
+
+@import '../node_modules/@fortawesome/fontawesome/styles.css';
+~~~
