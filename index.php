@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php include('includes/header.php'); ?>
-<main>
+<main class="home">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -47,7 +47,7 @@
     <div class="list_item mt-5 mb-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="card">
                         <img src="assets/images/home_inteco_interior_design_portfolio_2-300x276.jpg"
                              class="card-img-top"
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="card">
                         <img src="assets/images/home_inteco_interior_design_portfolio_2-300x276.jpg"
                              class="card-img-top"
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-sm-6 col-md-4">
                     <div class="card">
                         <img src="assets/images/home_inteco_interior_design_portfolio_2-300x276.jpg"
                              class="card-img-top"

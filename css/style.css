@@ -10535,6 +10535,10 @@ a:hover, a:active, a:focus {
   text-decoration: underline;
 }
 
+.card {
+  margin: 10px 0;
+}
+
 /**
  * Basic typography style for copy text
  */

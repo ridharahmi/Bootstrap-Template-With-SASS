@@ -33,3 +33,9 @@ a {
     text-decoration: underline;
   }
 }
+
+.card {
+  @include media-breakpoint-up(xs) {
+    margin: 10px 0;
+  }
+}
