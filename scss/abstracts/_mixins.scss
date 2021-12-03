@@ -226,16 +226,6 @@ $wide-screen: "(min-width: #{$max-breakpoint}px)";
   transition:         $transition;
 }
 
-//@keyframes logo-up {
-//    50% {
-//        top: 4.375rem;
-//    }
-//
-//    100% {
-//        top: -50%;
-//    }
-//}
-
 @keyframes a {
   0% {
     -webkit-transform: scaleX(1);
