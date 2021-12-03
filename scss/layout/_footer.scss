@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer{
+  color:$light-grey;
+  padding: 30px 0;
+  a{
+    color:$text-color;
+  }
+  @include media-breakpoint-up(xs) {
+    background-color:blueviolet;
+  }
+  @include media-breakpoint-up(sm) {
+    background-color:red;
+  }
+  @include media-breakpoint-up(md) {
+    background-color:burlywood;
+  }
+  @include media-breakpoint-up(lg) {
+    background-color:$brand-color;
+  }
+
+}
