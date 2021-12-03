@@ -1,3 +1,16 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+.btn{
+  @include rotate(2deg);
+  &.btn-primary{
+    @include box-shadow(10px 7px $primary);
+  }
+  &.btn-success{
+    @include box-shadow(10px 7px $success);
+  }
+
+  &.btn-warning{
+    @include box-shadow(10px 7px $warning);
+  }
+}

@@ -44,13 +44,55 @@
             <span class="sr-only">Next</span>
         </button>
     </div>
-    <div class="container">
-        <h1>Html/Sass boilerplate</h1>
-        <i class="far fa-save"></i>
-        <i class="far fa-user"></i>
-
+    <div class="list_item mt-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="assets/images/home_inteco_interior_design_portfolio_2-300x276.jpg"
+                             class="card-img-top"
+                             alt="item 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="assets/images/home_inteco_interior_design_portfolio_2-300x276.jpg"
+                             class="card-img-top"
+                             alt="item 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-success">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="assets/images/home_inteco_interior_design_portfolio_2-300x276.jpg"
+                             class="card-img-top"
+                             alt="item 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-warning">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- Main -->
+
 </main>
 <?php include('includes/footer.php'); ?>
 </body>
