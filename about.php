@@ -28,6 +28,7 @@
             </div>
             <p>This is a paragraph.</p>
             <p>This is a paragraph.</p>
+            <input name="name">
         </div>
     </section>
     <!-- Main -->

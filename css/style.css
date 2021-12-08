@@ -10687,11 +10687,9 @@ body {
 .combinators > p {
   color: #007bff42;
 }
-
 .combinators + p {
   color: #e50050 !important;
 }
-
 .combinators ~ p {
   color: #28a74585;
 }
