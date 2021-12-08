@@ -10684,4 +10684,16 @@ body {
   box-shadow: 10px 7px #ffc10761;
 }
 
+.combinators > p {
+  color: #007bff42;
+}
+
+.combinators + p {
+  color: #e50050 !important;
+}
+
+.combinators ~ p {
+  color: #28a74585;
+}
+
 /*# sourceMappingURL=style.css.map */

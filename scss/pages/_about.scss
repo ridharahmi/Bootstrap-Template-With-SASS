@@ -1,0 +1,10 @@
+.combinators > p {
+  color: $primary;
+}
+.combinators + p {
+  color: $brand-color !important;
+}
+
+.combinators ~ p {
+  color: $success;
+}

@@ -18,6 +18,16 @@
             <div class="w3-panel w3-border w3-border-red w3-hover-border-green">
                 <p>Red border that turns green on hover</p>
             </div>
+            <div class="combinators">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            </div>
+            <p>This is a paragraph.</p>
+            <p>This is a paragraph.</p>
         </div>
     </section>
     <!-- Main -->
