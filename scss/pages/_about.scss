@@ -1,8 +1,8 @@
-.combinators
-{
-  &> p {
+.combinators {
+  & > p {
     color: $primary;
   }
+
   & + p {
     color: $brand-color !important;
   }
