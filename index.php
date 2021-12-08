@@ -44,7 +44,7 @@
             <span class="sr-only">Next</span>
         </button>
     </div>
-    <div class="list_item mt-5 mb-5">
+    <section class="list_item mt-5 mb-5">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-4">
@@ -91,8 +91,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
+    </section>
 </main>
 <?php include('includes/footer.php'); ?>
 </body>

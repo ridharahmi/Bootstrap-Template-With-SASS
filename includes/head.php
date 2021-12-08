@@ -18,5 +18,6 @@
     href="assets/icons/ico_32.png"
 />
 <link rel="icon" type="image/png" sizes="16x16" href="#"/>
-<title>Sass</title>
+<title>Sass Bootstrap</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="css/style.css" type="text/css"/>
