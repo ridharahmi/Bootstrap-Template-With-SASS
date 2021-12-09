@@ -28,3 +28,8 @@ npm i --save @fortawesome/fontawesome
 
 @import '../node_modules/@fortawesome/fontawesome/styles.css';
 ~~~
+
+### Link 
+Css: https://www.w3schools.com/css/default.asp
+
+Sass: https://www.w3schools.com/sass/sass_extend.php

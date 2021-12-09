@@ -10694,4 +10694,22 @@ body {
   color: #28a74585;
 }
 
+.about, .about_1 {
+  border: 1px solid #e50050;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 20px auto;
+}
+.about p, .about_1 p {
+  color: #007bff42;
+}
+
+.about_1 p {
+  color: #28a74585;
+}
+
 /*# sourceMappingURL=style.css.map */

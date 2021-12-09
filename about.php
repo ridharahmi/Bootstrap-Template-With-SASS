@@ -28,6 +28,12 @@
             </div>
             <p>This is a paragraph.</p>
             <p>This is a paragraph.</p>
+            <div class="about">
+                <p>This is a paragraph.</p>
+            </div>
+            <div class="about_1">
+                <p>This is a paragraph.</p>
+            </div>
         </div>
     </section>
     <!-- Main -->
