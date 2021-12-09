@@ -12,3 +12,20 @@
   }
 
 }
+
+.about {
+  border: 1px solid $brand-color;
+  @include border-radius(15px);
+  padding: 30px;
+  margin: 20px auto;
+
+  p {
+    color: $primary;
+  }
+}
+.about_1{
+  @extend .about;
+  p{
+    color: $success;
+  }
+}
