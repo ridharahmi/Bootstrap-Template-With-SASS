@@ -12,6 +12,7 @@ npx create-html-sass-boilerplate app-name
 ### Once the boilerplate is created, cd into it:
 ~~~
 cd app-name
+npm install -g sass
 sass --watch scss/main.scss css/style.css
 ~~~
 
